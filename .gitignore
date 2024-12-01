@@ -1,0 +1,7 @@
+# tmux ignores
+tmux/plugins
+
+# nvim ignores
+nvim/.stylua.toml
+nvim/lazy-lock.json
+

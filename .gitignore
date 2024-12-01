@@ -5,3 +5,6 @@ tmux/plugins
 nvim/.stylua.toml
 nvim/lazy-lock.json
 
+# general ignores
+**/node_modules
+

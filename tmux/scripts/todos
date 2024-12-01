@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+DATE_TODAY=$(date -I)
+
+TODO_PATH=~/personal/todos
+
+if [ ! -e "${TODO_PATH}/${DATE_TODAY}/todos.md" ]; then
+	mkdir -p ${TODO_PATH}/${DATE_TODAY}
+	echo "# Todos for ${DATE_TODAY}" > ${TODO_PATH}/${DATE_TODAY}/todos.md
+	echo "" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
+	echo "- [ ]" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
+fi;
+
+nvim +$(wc -l ${TODO_PATH}/${DATE_TODAY}/todos.md | awk '{print $1}') ${TODO_PATH}/${DATE_TODAY}/todos.md
+

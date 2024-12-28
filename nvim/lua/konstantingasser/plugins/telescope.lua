@@ -51,7 +51,7 @@ return {
         --
         defaults = {
           layout_strategy = 'bottom_pane',
-          layout_config = { height = 0.20 },
+          layout_config = { height = 0.40 },
         },
 
         -- pickers = {}

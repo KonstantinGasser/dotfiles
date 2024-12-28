@@ -12,6 +12,16 @@ return {
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
+        -- Not sure if I like the use..vf{% == vf{grc...
+        -- incremental_selection = {
+        --   enable = true,
+        --   keymaps = {
+        --     init_selection = false,
+        --     node_incremental = 'grn',
+        --     scope_incremental = 'grc',
+        --     code_decremental = 'grm',
+        --   },
+        -- },
       }
 
       -- There are additional nvim-treesitter modules that you can use to interact

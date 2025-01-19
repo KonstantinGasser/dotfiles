@@ -1,12 +1,34 @@
 #!/usr/bin/env bash
 
 DATE_TODAY=$(date -I)
-
 TODO_PATH=~/personal/todos
+
+# check if open tasks from prev today exist
+last_non_empty=""
+for file in $(find "$TODO_PATH" -type f -name "todos.md" | sort); do
+  if [ -s "$file" ]; then
+    last_non_empty=$file
+  fi
+done
+
+left_todos=$(cat ${last_non_empty} | grep "\[ \]")
+line_count=$(echo "$left_todos" | wc -l)
+
 
 if [ ! -e "${TODO_PATH}/${DATE_TODAY}/todos.md" ]; then
 	mkdir -p ${TODO_PATH}/${DATE_TODAY}
-	echo "# Todos for ${DATE_TODAY}" > ${TODO_PATH}/${DATE_TODAY}/todos.md
+
+	# take leftover tasks from before
+	if [ "$line_count" -gt 0 ]; then
+		echo "# Open tasks from $(dirname "$last_non_empty")" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
+
+		echo "" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
+		echo "$left_todos" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
+	fi
+	echo "" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
+
+	echo "# Todos for ${DATE_TODAY}" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
+
 	echo "" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
 	echo "- [ ]" >> ${TODO_PATH}/${DATE_TODAY}/todos.md
 fi;

@@ -8,8 +8,8 @@ return {
     -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
     -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
     -- refer to `:h file-pattern` for more examples
-    'BufReadPre /Users/konstantingasser/.obsidian/*.md',
-    'BufNewFile /Users/konstantingasser/.obsidian/*.md',
+    'BufReadPre /Users/konstantingasser/obsidian/*.md',
+    'BufNewFile /Users/konstantingasser/obsidian/*.md',
   },
   dependencies = {
     -- Required.
@@ -21,11 +21,11 @@ return {
     workspaces = {
       {
         name = 'personal',
-        path = '~/.obsidian/personal',
+        path = '~/obsidian/personal',
       },
       {
         name = 'university',
-        path = '~/.obsidian/university',
+        path = '~/obsidian/university',
       },
     },
     -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.

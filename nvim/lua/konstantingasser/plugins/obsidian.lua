@@ -28,6 +28,7 @@ return {
         path = '~/obsidian/university',
       },
     },
+
     -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
     completion = {
       -- Set to false to disable completion.
@@ -35,6 +36,7 @@ return {
       -- Trigger completion at 2 chars.
       min_chars = 2,
     },
+
     ui = {
       enable = true, -- set to false to disable all additional syntax features
       update_debounce = 200, -- update delay after a text change (in milliseconds)
@@ -73,4 +75,7 @@ return {
       },
     },
   },
+  -- config = function()
+  --   vim.keymap.set('n', '<leader>bl', ':ObsidianBacklinks<CR>', { desc = 'List known backlinks' })
+  -- end,
 }

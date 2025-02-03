@@ -14,11 +14,11 @@ return {
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.opt.termguicolors = true
       vim.cmd.colorscheme 'github_dark'
-      vim.cmd 'hi Normal guibg=#2c2c2c'
+      vim.cmd 'hi Normal guibg=#2e383e'
       vim.cmd 'hi NormalFloat guibg=#2e373e'
-      vim.cmd 'hi NormalNC guibg=#2c2c2c'
-      vim.cmd 'hi WinBar guibg=#2c2c2c'
-      vim.cmd 'hi WinBarNC guibg=#2c2c2c'
+      vim.cmd 'hi NormalNC guibg=#2e383e'
+      vim.cmd 'hi WinBar guibg=#2e383e'
+      vim.cmd 'hi WinBarNC guibg=#2e383e'
       vim.cmd 'hi Pmenu guibg=#2e373e guifg=#abb2bf'
       vim.cmd 'hi PmenuSel guibg=#3e4451 guifg=#ffffff'
       vim.cmd 'hi PmenuSbar guibg=#282c34 guifg=#3e4451'

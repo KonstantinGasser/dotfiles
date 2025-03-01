@@ -42,6 +42,16 @@ return {
       -- require('luasnip.latex-snippets').setup()
 
       cmp.setup {
+        window = {
+          -- completion = cmp.config.window.bordered(),
+          -- documentation = cmp.config.window.bordered(),
+          completion = {
+            border = 'rounded',
+          },
+          documentation = {
+            border = 'single',
+          },
+        },
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)

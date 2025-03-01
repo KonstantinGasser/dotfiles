@@ -75,6 +75,12 @@ return {
       },
     },
   },
+  init = function()
+    -- Obsidian.nvim keymaps
+    vim.keymap.set('n', '<leader>ob', ':ObsidianBacklinks<CR>', { desc = 'List backlinks to note' })
+    vim.keymap.set('n', '<leader>of', ':ObsidianFollowLink<CR>', { desc = 'Follow or list links' })
+    vim.keymap.set('n', '<leader>ol', ':ObsidianLinks<CR>', { desc = 'List links in note' })
+  end,
   -- config = function()
   --   vim.keymap.set('n', '<leader>bl', ':ObsidianBacklinks<CR>', { desc = 'List known backlinks' })
   -- end,

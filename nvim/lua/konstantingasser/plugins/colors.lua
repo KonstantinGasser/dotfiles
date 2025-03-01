@@ -10,6 +10,9 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     init = function()
       -- Load the colorscheme here.
+      -- list highlight groups and description:
+      -- so $VIMRUNTIME/syntax/hitest.vim
+
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.opt.termguicolors = true
@@ -23,6 +26,11 @@ return {
       vim.cmd 'hi PmenuSel guibg=#3e4451 guifg=#ffffff'
       vim.cmd 'hi PmenuSbar guibg=#282c34 guifg=#3e4451'
       vim.cmd 'hi PmenuThumb guibg=#61afef guifg=#282c34'
+      vim.cmd 'hi Statement guifg=#da6362'
+      vim.cmd 'hi Operator guifg=#da6362'
+      vim.cmd 'hi Conditional guifg=#da6362'
+      vim.cmd 'hi PreProc guifg=#da6362'
+      vim.cmd 'hi Type guifg=#d77f48'
     end,
   },
 }

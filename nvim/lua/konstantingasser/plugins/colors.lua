@@ -18,12 +18,11 @@ return {
       vim.opt.termguicolors = true
       vim.cmd.colorscheme 'github_dark'
       vim.cmd 'hi Normal guibg=#2e383e'
-      vim.cmd 'hi NormalFloat guibg=#2e373e'
+      vim.cmd 'hi NormalFloat guibg=#2e383e'
+      vim.cmd 'hi FloatBorder guibg=#2e383e guifg=#ffffff'
       vim.cmd 'hi NormalNC guibg=#2e383e'
       vim.cmd 'hi WinBar guibg=#2e383e'
       vim.cmd 'hi WinBarNC guibg=#2e383e'
-      vim.cmd 'hi Pmenu guibg=#2e373e guifg=#abb2bf'
-      vim.cmd 'hi PmenuSel guibg=#3e4451 guifg=#ffffff'
       vim.cmd 'hi PmenuSbar guibg=#282c34 guifg=#3e4451'
       vim.cmd 'hi PmenuThumb guibg=#61afef guifg=#282c34'
       vim.cmd 'hi Statement guifg=#da6362'
@@ -31,6 +30,8 @@ return {
       vim.cmd 'hi Conditional guifg=#da6362'
       vim.cmd 'hi PreProc guifg=#da6362'
       vim.cmd 'hi Type guifg=#d77f48'
+      -- vim.cmd 'hi Pmenu guibg=#2e373e guifg=#abb2bf'
+      -- vim.cmd 'hi PmenuSel guibg=#434d53 guifg=#ffffff'
     end,
   },
 }

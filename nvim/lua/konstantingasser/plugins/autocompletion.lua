@@ -43,14 +43,14 @@ return {
 
       cmp.setup {
         window = {
-          -- completion = cmp.config.window.bordered(),
-          -- documentation = cmp.config.window.bordered(),
-          completion = {
-            border = 'rounded',
-          },
-          documentation = {
-            border = 'single',
-          },
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+          -- completion = {
+          --   border = 'rounded',
+          -- },
+          -- documentation = {
+          --   border = 'rounded',
+          -- },
         },
         snippet = {
           expand = function(args)

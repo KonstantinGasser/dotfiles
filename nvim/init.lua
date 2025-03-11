@@ -26,6 +26,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = 'rounded', -- Options: "single", "double", "rounded", "solid", "shadow"
+})
+
 require('lazy').setup 'konstantingasser.plugins'
 require 'konstantingasser.mappings'
 -- The line beneath this is called `modeline`. See `:help modeline`
